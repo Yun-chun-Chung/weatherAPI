@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url(./img/bg-2.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.weather-card {
+  width: 220px;
+  height: 300px;
+  margin-top: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 15PX;
+  color: rgb(52, 22, 7);
+}
+
+.weather-card:hover {
+  color: rgb(255, 250, 228);
+  animation: cardRotate 3s ease-out 0s infinite;
+}
+
+@keyframes cardRotate {
+  0% {
+    transform: rotateY(0deg);
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-middle {
+  width: 220px;
+  padding: 10px;
+}
+
+.card-bottom {
+  width: 200px;
+}
+
+.cityName {
+  width: 80px;
+  text-align: left;
+  padding: 10px;
+}
+
+
+.weatherTime {
+  width: 130px;
+  text-align: right;
+  padding: 10px;
+  justify-content: center;
+}
+
+
+.Icon {
+  width: 200px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  animation: ICON 3s linear infinite;
+}
+
+@keyframes ICON {
+  from {
+    transform: translateX(10px);
+  }
+
+  to {
+    transform: translateX(-5px);
+
+  }
+
+}
+
+
+
+.weatherDescribe {
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+.temperature {
+  width: 200px;
+  display: flex;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.temperature img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  opacity: 0.6;
+}
+
+.rainning {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.rainning img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  opacity: 0.5;
+
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.area-list {
+  /* background-color: rgb(205, 214, 215); */
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  color: rgb(52, 22, 7);
+}
+
+.title {
+  width: 30%;
+  display: flex;
+  font-size: 28px;
+  flex-direction: column;
+  padding: 5px;
+
+}
+
+.timeRangeSelect {
+  background-color: transparent;
+  border-radius: 5px;
+  width: 60%;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.area {
+  width: 10%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+
+.area.active {
+  background-color: rgb(119, 174, 189);
+  border-radius: 3px;
+  color: aliceblue;
+  opacity: 0.8;
+}
