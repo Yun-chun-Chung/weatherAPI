@@ -73,7 +73,7 @@ const renderWeather = (locations) => {
                     <div class="Icon"><img src="${weatherIconSrc}" alt="Weather Icon"></div>
                     <div class="weatherDescribe">${weather.weatherDescription}</div>
                     
-                    <div class="temperature"><img src="../img/temperature.svg" alt="Temperature Icon">${maxTemperature} / ${minTemperature}</div>
+                    <div class="temperature"><img src="./img/temperature.svg" alt="Temperature Icon">${maxTemperature} / ${minTemperature}</div>
                 </div>
                 <div class="card-bottom">
                     <div class="rainning">${rainProbability}</div>
@@ -134,7 +134,7 @@ const checkImg = (description, time) => {
 
 // 顯示雨傘icon
 function weatherRain(rainning) {
-    return rainning ? `<img src="../img/umbrella.svg" alt="Rain Icon"> ${rainning}` : '';
+    return rainning ? `<img src="./img/umbrella.svg" alt="Rain Icon"> ${rainning}` : '';
 }
 
 // 溫度描述 -> temperature
